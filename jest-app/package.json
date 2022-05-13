@@ -4,7 +4,8 @@
   "description": "Getting To learn jest",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node myAsync.js"
   },
   "author": "",
   "license": "ISC",
