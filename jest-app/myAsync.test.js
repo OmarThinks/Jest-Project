@@ -17,4 +17,11 @@ test('failure async 1', async () => {
 });
 
 
+test('failure async 2', async () => {
+    expect.assertions(1);
+
+    myAsyncFunction(-1).catch(e => {expect(e).toMatch('MyError')});
+});
+
+
 
