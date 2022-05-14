@@ -1,27 +1,20 @@
 const myAsyncFunction = require('./myAsync');
-/*
-test("myAsyncFunction1 toBe 1", ()=>{
-    return myAsyncFunction(1).then((data)=>{
-        expect(data).toBe(1);
-    })
-});
-*/
 
-/*
-test('the data is peanut butter', () => {
-     myAsyncFunction(1).then(data => {
-      expect(data).toBe(1);
-    });
-});
-*/
-
-
-test('the data is peanut butter', async () => {
+test('successful async 1', async () => {
     const data = await myAsyncFunction(1);
     expect(data).toBe(1);
-  });
+});
 
 
+
+test('successful async 2', async () => {
+    expect(myAsyncFunction(1)).resolves.toBe(1);
+});
+
+
+test('failure async 1', async () => {
+    expect(myAsyncFunction(-1)).rejects.toMatch("MyError");
+});
 
 
 
