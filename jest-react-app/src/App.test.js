@@ -1,7 +1,7 @@
 import Link from "./Components/Link";
 import renderer from 'react-test-renderer';
 
-it('changes the class when hovered', () => {
+test('changes the class when hovered', () => {
   const component = renderer.create(
     <Link page="http://www.facebook.com">Facebook</Link>,
   );
