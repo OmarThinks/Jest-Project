@@ -1,33 +1,25 @@
-const sum = require('./sum');
-
-test("sum 1+2 toBe three", ()=>{
-    expect(sum(1,2)).toBe(3);
+const myAsyncFunction = require('./myAsync');
+/*
+test("myAsyncFunction1 toBe 1", ()=>{
+    return myAsyncFunction(1).then((data)=>{
+        expect(data).toBe(1);
+    })
 });
+*/
 
-test("sum 1+2 toEqual three", ()=>{
-    expect(sum(1,2)).toEqual(3);
+/*
+test('the data is peanut butter', () => {
+     myAsyncFunction(1).then(data => {
+      expect(data).toBe(1);
+    });
 });
+*/
 
 
-
-test("Object toBe same", ()=>{
-    expect({"hi":1}).toEqual({"hi":1});
-});
-
-
-test("Object toEqual same", ()=>{
-    expect({"hi":1}).not.toBe({"hi":1});
-});
-
-
-
-
-test("Object toEqual same object", ()=>{
-    let mydata = {"hi":1};
-    expect(mydata).toBe(mydata);
-});
-
-
+test('the data is peanut butter', async () => {
+    const data = await myAsyncFunction(1);
+    expect(data).toBe(1);
+  });
 
 
 
